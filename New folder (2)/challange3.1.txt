@@ -1,0 +1,20 @@
+def linear_search_product(products, target_product):
+    # Initialize an empty list to store the indices of occurrences.
+    indices = []
+
+    # Loop through the list of products and check each product name.
+    for index, product in enumerate(products):
+        if product == target_product:
+            # If the product matches the target, add its index to the list.
+            indices.append(index)
+
+    return indices
+
+# Example usage:
+products = ["Apple", "Banana", "Orange", "Apple", "Grapes", "Apple"]
+target_product = "Apple"
+result = linear_search_product(products, target_product)
+if result:
+    print(f"The product '{target_product}' was found at indices: {result}")
+else:
+    print(f"The product '{target_product}' was not found in the list.")
